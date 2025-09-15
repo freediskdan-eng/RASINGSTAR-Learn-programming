@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fand: Путь в Веб-Разработку</title>
+    <!-- Подключение шрифтов Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Подключение вашего файла стилей -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">RASINGSTAR</a>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="#html-section">Что такое HTML?</a></li>
+                    <li><a href="#css-section">Что такое CSS?</a></li>
+                    <li><a href="#js-section">Что такое JS?</a></li>
+                    <li><a href="#practice-section">Практика</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <!-- Кнопка "Онлайн редактор" для десктопа -->
+                <a href="https://freediskdan-eng.github.io/YouCode.RASINGSTAR/" target="_blank" rel="noopener noreferrer" class="btn btn-online-editor">Онлайн редактор</a>
+                <button class="btn btn-login">Войти</button>
+                <div class="hamburger-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="mobile-menu">
+        <div class="close-btn">&times;</div>
+        <ul>
+            <li><a href="#html-section">Что такое HTML?</a></li>
+            <li><a href="#css-section">Что такое CSS?</a></li>
+            <li><a href="#js-section">Что такое JS?</a></li>
+            <li><a href="#practice-section">Практика</a></li>
+            <!-- Кнопка "Онлайн редактор" для мобильного меню -->
+            <li><a href="https://freediskdan-eng.github.io/YouCode.RASINGSTAR/" target="_blank" rel="noopener noreferrer" class="btn btn-online-editor mobile-editor">Онлайн редактор</a></li>
+            <li><button class="btn btn-login mobile-login">Войти</button></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero-banner">
+            <div class="container">
+                <h1>Разбуди Своего Внутреннего Разработчика.</h1>
+                <p>Веб — это не просто код. Это искусство, логика и бесконечные возможности. Открой для себя мир, где твои идеи воплощаются в реальность.</p>
+                <button class="btn btn-primary scroll-to-content">Начать Путешествие</button>
+            </div>
+        </section>
+
+        <article class="article-content">
+            <div class="container">
+                <section id="html-section" class="content-block">
+                    <h2>HTML: Архитектор Веба</h2>
+                    <p>HTML (HyperText Markup Language) — это не язык программирования, а язык разметки. Он служит скелетом любой веб-страницы, определяя ее структуру и содержание. Представьте дом: HTML — это его фундамент, стены и комнаты. Он сообщает браузеру, где находится заголовок, где текст, где изображения и ссылки.</p>
+                    <h3>Базовая структура HTML</h3>
+                    <div class="code-image-container">
+                        <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ru"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Моя Первая Страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет, Мир Веба!&lt;/h1&gt;
+    &lt;p&gt;Это мой первый абзац.&lt;/p&gt;
+    &lt;a href="https://example.com"&gt;Ссылка&lt;/a&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                        <div class="image-wrapper">
+                            <img src="img/html_structure.jpg" alt="Визуализация структуры HTML тегов" loading="lazy">
+                            <p class="image-source"><a href="https://logoslab.ru/full_img/struktura-dokumenta-html-prezentatsija/2" target="_blank" rel="noopener noreferrer">Источник</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="css-section" class="content-block">
+                    <h2>CSS: Дизайнер Вашего Проекта</h2>
+                    <p>CSS (Cascading Style Sheets) — это язык стилей, который описывает, как элементы HTML должны выглядеть. Если HTML — это скелет, то CSS — это одежда, макияж и интерьер. Он отвечает за цвета, шрифты, отступы, расположение элементов и адаптивность под разные устройства.</p>
+                    <h3>Как подключить и использовать CSS</h3>
+                    <div class="code-image-container">
+                        <pre><code class="language-css">/* styles.css */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111;
+    color: #EEE;
+}
+
+h1 {
+    color: #FFF;
+    font-size: 3em;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+</code></pre>
+                        <div class="image-wrapper image-fit-contain">
+                            <img src="img/css_connect.png" alt="Пример CSS стилизации элементов" loading="lazy">
+                            <p class="image-source"><a href="#" target="_blank" rel="noopener noreferrer">Источник</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="js-section" class="content-block">
+                    <h2>JavaScript: Сердце Интерактивности</h2>
+                    <p>JavaScript (JS) — это полноценный язык программирования, который делает веб-страницы динамичными и интерактивными. Он позволяет создавать анимации, проверять формы, загружать данные без перезагрузки страницы и многое другое. JS — это мозг, который оживляет ваш дом, добавляя в него электричество, умную бытовую технику и интерактивные панели.</p>
+                    <h3>Простой пример на JavaScript</h3>
+                    <div class="code-image-container">
+                        <pre><code class="language-javascript">// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const button = document.querySelector('.btn-primary');
+    button.addEventListener('click', () => {
+        alert('Вы начали свое путешествие!');
+    });
+});
+</code></pre>
+                        <div class="image-wrapper">
+                            <img src="img/js_defolt.png" alt="Символ интерактивности JavaScript" loading="lazy">
+                            <p class="image-source"><a href="https://webformyself.com/5-luchshix-praktik-chistogo-kodirovaniya-na-javascript/" target="_blank" rel="noopener noreferrer">Источник</a></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="structure-theory-practice" class="content-block">
+                    <h2>От Теории к Практике: Строим Веб</h2>
+                    <p>Понимание основ HTML, CSS и JS — это лишь первый шаг. Настоящее волшебство начинается, когда вы начинаете их комбинировать. Веб-разработка — это постоянное обучение, эксперименты и решение задач.</p>
+
+                    <h3>Теоретические элементы:</h3>
+                    <ul>
+                        <li>**Семантика HTML:** Используйте правильные теги для правильных целей (<code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>) для улучшения доступности и SEO.</li>
+                        <li>**Блочная модель CSS:** Понимание того, как элементы занимают пространство (<code>margin</code>, <code>border</code>, <code>padding</code>, <code>content</code>).</li>
+                        <li>**Event Loop в JS:** Как JavaScript обрабатывает асинхронные операции и события.</li>
+                        <li>**Адаптивный дизайн:** Как сделать ваш сайт красивым на любом устройстве с помощью медиазапросов CSS.</li>
+                    </ul>
+                    
+                    <!-- Обертка для картинки и внешней подписи -->
+                    <div class="figure-container">
+                        <div class="image-wrapper">
+                            <img src="img/box-model-prop.png" alt="Изображение блочной модели CSS" loading="lazy">
+                        </div>
+                        <p class="image-source"><a href="https://mpbox.ru/learn/css/box-model/what-is-the-box-model/" target="_blank" rel="noopener noreferrer">Источник</a></p>
+                    </div>
+
+                    <h3 id="practice-section">Практические элементы:</h3>
+                    <p>Лучший способ учиться — это делать. Начните с простых проектов:</p>
+                    <ul>
+                        <li>Создайте статичный одностраничный сайт-портфолио.</li>
+                        <li>Сверстайте простой лендинг для вымышленного продукта.</li>
+                        <li>Реализуйте интерактивный список дел (To-Do List) на JavaScript.</li>
+                        <li>Сделайте простой калькулятор или игру "Угадай число".</li>
+                    </ul>
+                    <p>Используйте онлайн-редакторы кода (CodePen, JSFiddle) и, конечно, свой любимый текстовый редактор (VS Code).</p>
+                    <pre><code class="language-javascript">// Пример JS для интерактивного элемента
+const toggleButton = document.getElementById('toggle-info');
+const infoBlock = document.getElementById('extra-info');
+
+if (toggleButton && infoBlock) {
+    toggleButton.addEventListener('click', () => {
+        infoBlock.classList.toggle('hidden');
+        if (infoBlock.classList.contains('hidden')) {
+            toggleButton.textContent = 'Показать больше';
+        } else {
+            toggleButton.textContent = 'Скрыть информацию';
+        }
+    });
+}
+</code></pre>
+                    <!-- Обертка для картинки и внешней подписи -->
+                    <div class="figure-container">
+                        <div class="image-wrapper">
+                            <img src="img/coding_process.png" alt="Изображение процесса кодирования в IDE" loading="lazy">
+                        </div>
+                        <p class="image-source"><a href="https://habr.com/ru/companies/serverspace/articles/693374/" target="_blank" rel="noopener noreferrer">Источник</a></p>
+                    </div>
+                </section>
+
+                <section class="call-to-action">
+                    <h2>Твой Путь Начинается Сейчас!</h2>
+                    <p>Не бойся ошибок, ведь каждая из них — это шаг к совершенству. Мир веб-разработки ждет твоих и твоего таланта. Присоединяйся!</p>
+                    <button class="btn btn-primary">Изучить Больше</button>
+                </section>
+            </div>
+        </article>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>Автор Сайта: Данил Тётушкин | Компания: RASINGSTAR сообщество &copy; 2025</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для изображений -->
+    <div class="image-modal-backdrop">
+        <div class="image-modal-content">
+            <button class="modal-close" aria-label="Закрыть модальное окно">&times;</button>
+            <img src="" alt="Full size image">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
