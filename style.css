@@ -130,12 +130,24 @@ a:hover {
     align-items: center;
 }
 
+/* СТАЛО */
 .logo {
-    font-family: var(--font-family-code);
-    font-size: 1.8em;
-    font-weight: 700;
-    color: var(--color-white);
+    /* Убираем лишние отступы под изображением, если они появятся */
+    line-height: 0; 
+    display: block;
 }
+
+.logo img {
+    height: 45px; /* Подберите высоту под ваш логотип, чтобы он хорошо смотрелся в шапке */
+    width: auto;  /* Ширина подстроится автоматически, сохраняя пропорции */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover img {
+    opacity: 0.8; /* Небольшой эффект при наведении для интерактивности */
+}
+
 
 .desktop-nav ul {
     list-style: none;
