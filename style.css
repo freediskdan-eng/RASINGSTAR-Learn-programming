@@ -130,24 +130,22 @@ a:hover {
     align-items: center;
 }
 
-/* СТАЛО */
+/* Стили для логотипа-картинки */
 .logo {
-    /* Убираем лишние отступы под изображением, если они появятся */
     line-height: 0; 
     display: block;
 }
 
 .logo img {
-    height: 45px; /* Подберите высоту под ваш логотип, чтобы он хорошо смотрелся в шапке */
-    width: auto;  /* Ширина подстроится автоматически, сохраняя пропорции */
+    height: 45px;
+    width: auto;
     display: block;
     transition: opacity 0.3s ease;
 }
 
 .logo:hover img {
-    opacity: 0.8; /* Небольшой эффект при наведении для интерактивности */
+    opacity: 0.8;
 }
-
 
 .desktop-nav ul {
     list-style: none;
@@ -164,6 +162,25 @@ a:hover {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+/* Ссылки на соцсети в шапке */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-link img {
+    height: 28px;
+    width: auto;
+    display: block;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover img {
+    opacity: 0.7;
+    transform: scale(1.1);
 }
 
 /* --- Гамбургер меню (иконка) --- */
@@ -258,6 +275,23 @@ a:hover {
 }
 .mobile-menu .mobile-login {
     margin-top: 15px;
+}
+
+/* Стили для иконок в моб. меню */
+.mobile-menu .mobile-social-links {
+    margin-top: 40px;
+    list-style-type: none;
+}
+
+.mobile-menu .mobile-social-links div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.mobile-menu .social-link img {
+    height: 35px;
 }
 
 
@@ -417,8 +451,6 @@ code {
 }
 
 /* --- Стили для обертки изображения и источника --- */
-
-/* ДОБАВЛЕНО: Общий контейнер для одиночной картинки и ее подписи */
 .figure-container {
     margin: 30px 0;
 }
@@ -428,16 +460,14 @@ code {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     background-color: var(--color-light-grey);
-    display: flex; /* Это важно для некоторых дочерних элементов */
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     transition: transform 0.2s ease;
 }
-/* ИЗМЕНЕНО: Отступы теперь на figure-container, а не здесь */
 .figure-container .image-wrapper {
     margin: 0;
 }
-/* ИЗМЕНЕНО: Ховер-эффект теперь на всем контейнере */
 .figure-container:hover .image-wrapper {
     transform: translateY(-5px);
 }
@@ -446,11 +476,8 @@ code {
     width: 100%;
     height: auto;
     display: block;
-    /* ИЗМЕНЕНО: Скругление для картинок, чья подпись внутри */
     border-radius: 8px 8px 0 0; 
 }
-
-/* ИЗМЕНЕНО: Стили для одиночных изображений (которые теперь в figure-container) */
 .figure-container .image-wrapper {
     max-height: 500px;
     aspect-ratio: 16 / 9;
@@ -458,10 +485,9 @@ code {
 .figure-container .image-wrapper img {
     height: 100%;
     object-fit: cover;
-    border-radius: 8px; /* Скругляем все углы, т.к. подписи нет внутри */
+    border-radius: 8px;
 }
 
-/* ИЗМЕНЕНО: Стили для подписи-источника */
 .image-source {
     font-size: 0.9em;
     color: var(--color-text-medium);
@@ -469,12 +495,10 @@ code {
     width: 100%;
     font-style: italic;
 }
-/* Для подписей ВНУТРИ image-wrapper (например, у блоков с кодом) */
 .image-wrapper > .image-source {
     padding: 10px 15px 15px;
     margin-top: auto;
 }
-/* Для подписей СНАРУЖИ (в figure-container) */
 .figure-container > .image-source {
     padding: 0;
     margin-top: 12px;
@@ -599,7 +623,6 @@ code {
 }
 
 /* --- Медиа-запросы (Адаптивность) --- */
-
 @media (min-width: 992px) {
     .code-image-container {
         display: flex;
@@ -623,7 +646,7 @@ code {
         height: 100%;
         object-fit: cover;
         min-height: 150px;
-        border-radius: 8px 8px 0 0; /* Сброс на случай переопределения */
+        border-radius: 8px 8px 0 0;
     }
 
     .code-image-container .image-wrapper.image-fit-contain img {
@@ -642,8 +665,10 @@ code {
     .hamburger-menu {
         display: flex;
     }
+    /* Скрываем кнопки и соцсети в десктопной шапке */
     .main-header .btn-login,
-    .main-header .btn-online-editor {
+    .main-header .btn-online-editor,
+    .main-header .social-links { 
         display: none; 
     }
 }
@@ -652,8 +677,8 @@ code {
     .main-header {
         padding: 10px 0;
     }
-    .logo {
-        font-size: 1.5em;
+    .logo img {
+        height: 38px; /* Уменьшаем логотип на маленьких экранах */
     }
     .hero-banner h1 {
         font-size: clamp(2em, 8vw, 3.5em);
